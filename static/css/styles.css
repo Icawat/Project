@@ -1,0 +1,185 @@
+/* Body styling for overall layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontal centering */
+    background-color: #F8F3E6; /* Light background color */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #b7894b; /* Dark brown */
+    width: 100%; /* Full-width navbar */
+    padding: 10px 0; /* Add padding for spacing */
+    text-align: center;
+    position: fixed; /* Keep navbar fixed at the top */
+    top: 0; /* Position it at the top of the page */
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Navbar links styling */
+.navbar a {
+    text-decoration: none;
+    color: #f9f5f0;
+    margin: 0 15px; /* Space between links */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #F4E1C1; /* Light brown on hover */
+}
+
+/* Content container for homepage */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontal centering */
+    justify-content: flex-start; /* Align at the top */
+    text-align: center; /* Center text */
+    margin-top: 120px; /* Add space for navbar, adjust as needed */
+    padding: 20px; /* Ensure content has padding around it */
+    width: 100%; /* Ensure container spans the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* H1 title styling for all pages */
+h1 {
+    font-size: 2.5rem;
+    color: #6A4E23;
+    margin-top: 50px; /* Add some space from the top */
+    margin-bottom: 20px; /* Add space below title */
+    padding: 0; /* Ensure no padding around the title */
+}
+
+/* Recipe list styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+/* Optional: Add styling for images */
+/* Styling for images within the post */
+img {
+    width: 200px; /* Set the width to your desired size */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Make image a block-level element */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+    border-radius: 8px; /* Optional: rounded corners for a nice look */
+    margin-top: 10px; /* Optional: space between the image and text */
+}
+
+/* Style for the post items */
+.post-item {
+    display: flex;
+    flex-direction: row; /* Align items horizontally (side by side) */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* Optional: background color for the entire post item */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: soft shadow effect */
+}
+
+/* Styling for the recipe box */
+.recipe-box {
+    flex: 1; /* Makes it take up equal space */
+    margin-right: 20px; /* Space between the recipe and description */
+    text-align: center;
+}
+
+.post-image {
+    width: 150px; /* Fixed size for the image */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center the image */
+    border-radius: 8px;
+}
+
+/* Styling for the description box */
+.description-box {
+    flex: 2; /* Makes it take up more space */
+    background-color: #f9f9f9; /* Light background for the description */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left; /* Align text to the left in the description */
+}
+
+/* Optional: Styling for the "Read More" link */
+.description-box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.description-box a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust the size and padding of the H1 title */
+h1 {
+    font-size: 2.5rem;
+    color: #6A4E23;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+/* Ensure .box-container styling */
+.box-container {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px; /* Space between boxes */
+    text-align: left; /* Align text to the left */
+}
+
+/* Explicitly style the h2 inside .box-container */
+.box-container h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+    color: #6A4E23; /* Match with the theme */
+    margin: 0 0 10px; /* Add space below the heading */
+    padding: 10px; /* Optional: Add padding around the heading */
+    background-color: #e4d9c5; /* Light brown background for distinction */
+    border-radius: 5px; /* Round the edges of the heading background */
+}
+
+/* Style for the content inside .box-container */
+.box-container p {
+    font-size: 1rem; /* Standard font size for content */
+    color: #333; /* Dark gray color for text */
+    margin-top: 10px; /* Space between header and content */
+}
+
+.box-container {
+    border: 2px solid red; /* Add a visible border for debugging */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.box-container h2 {
+    background-color: yellow; /* Highlight header background for debugging */
+    padding: 10px;
+}
+
+.box-container p {
+    color: blue; /* Change paragraph text color for debugging */
+    margin-top: 10px;
+}
+

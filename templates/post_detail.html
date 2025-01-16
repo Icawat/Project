@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ object.name }}</h1>
+<img src="{{ object.image.url }}" alt="{{ object.name }}">
+<p>{{ object.description }}</p>
+<h2>Recipe:</h2>
+<p>{{ object.recipe }}</p>
+
+
+<h2>Comments:</h2>
+<ul>
+    {% for comment in object.comments.all %}
+    <li>{{ comment.content }} - {{ comment.created_at }}</li>
+    {% endfor %}
+</ul>
+<form action="{% url 'new_comment' %}" method="post">
+    {% csrf_token %}
+    <textarea name="content"></textarea>
+    <input type="hidden" name="recipe" value="{{ object.id }}">
+    <button type="submit" >Add Comment</button>
+</form>
+<a href="{% url 'update_post' object.id %}">Edit Post</a> |
+<a href="{% url 'delete_post' object.id %}">Delete Post</a>
+{% endblock %}

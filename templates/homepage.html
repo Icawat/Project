@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-container">
+    <h1 class="page-title">Philippine Cuisine</h1>
+    <ul class="recipe-list">
+        {% for recipe in recipes %}
+        <li class="recipe-item">
+            <h2>{{ recipe.name }}</h2>
+            <p>{{ recipe.description|truncatechars:100 }}</p>
+            <a href="{% url 'view_recipe' recipe.id %}">Read More</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

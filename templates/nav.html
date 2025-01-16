@@ -1,0 +1,8 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<nav class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'categories' %}">Categories</a>
+    <a href="{% url 'post_list' %}">Posts</a>
+</nav>
